@@ -1,12 +1,12 @@
 import React from 'react'
-import Navbar from './Sidebar'
-import VideoContainer from "./VideoContainer"
+import Sidebar from './Sidebar'
+import { Outlet } from 'react-router-dom'
 
 const MainContainer = () => {
   return (
     <div className='flex'>
-      <Navbar/>
-      <VideoContainer/>
+      <Sidebar/>
+      <Outlet/>
     </div>
   )
 }

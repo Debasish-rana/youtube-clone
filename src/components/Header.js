@@ -1,11 +1,10 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { toggleshowSidebar } from "../utils/appSlice";
 
 
 const Header = () => {
   const dispatch = useDispatch()
-  const showSidebar = useSelector((store)=>store.sidebar.showSidebar)
   const handleClick = ()=>{
       dispatch(toggleshowSidebar())
   }

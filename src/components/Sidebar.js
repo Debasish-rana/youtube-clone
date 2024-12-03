@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const showSidebar = useSelector((store) => store.sidebar.showSidebar);
@@ -10,7 +11,7 @@ const Sidebar = () => {
       {showSidebar === true ? (
         <div className="w-64 bg-white p-7 shadow-2xl">
           <ul>
-            <li className="p-3 font-bold ">Home</li>
+            <li className="p-3"><Link to={"/youtube-clone"}>Home</Link></li>
             <li className="p-3">Shorts</li>
             <li className="p-3">Videos</li>
             <li className="p-3">Live</li>
