@@ -11,9 +11,10 @@ const sidebarSlice = createSlice({
     },
     closeSidebar:(state) => {
       state.showSidebar = false;
-    }
+    },
+   
   },
 });
 
-export const { toggleshowSidebar, closeSidebar } = sidebarSlice.actions;
+export const { toggleshowSidebar, closeSidebar, addQueryvalue} = sidebarSlice.actions;
 export default sidebarSlice.reducer;

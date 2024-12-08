@@ -3,13 +3,17 @@ import ButtonList from "./ButtonList";
 import { YOUTUBE_API } from "../utils/constant";
 import VideoCard from "./VideoCard";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
+
 
 const VideoContainer = () => {
   const [videosData, setVideoData] = useState([]);
-  //console.log(videosData[0]);
+  const query = useSelector((store) => store.query.queryValue);
+  console.log(query);
 
   useEffect(() => {
-    getVideoData();
+   getVideoData();
   }, []);
 
   const getVideoData = async () => {
@@ -24,8 +28,8 @@ const VideoContainer = () => {
       <ButtonList />
       <div className="flex flex-wrap">
         {videosData.map((video) => (
-          <Link to={"/youtube-clone/watch?v=" + video.id}>
-            <VideoCard key={video.id} videoData={video} />
+          <Link key={video.id} to={"/youtube-clone/watch?v=" + video.id}>
+            <VideoCard videoData={video} />
           </Link>
         ))}
       </div>
