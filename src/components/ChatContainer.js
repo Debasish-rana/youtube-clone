@@ -25,16 +25,16 @@ const ChatContainer = () => {
 
   return (
     <>
-      <div className="border-2 border-black rounded-lg p-2 bg-neutral-100">
+      <div className="border-2 border-black rounded-lg p-2 bg-neutral-100 ml-[-12px] md:ml-1 mt-3 md:mt-0 w-[370px] md:w-[450px] ">
         <p>Live Chat</p>
-        <div className=" w-[450px] h-[460px] overflow-y-auto p-2 flex flex-col-reverse">
+        <div className="w-[450px]  h-[460px] overflow-y-auto p-2 flex flex-col-reverse">
           {chatData.map((c, index) => (
             <LiveChat key={index} chatName={c.name} chatComment={c.massage} />
           ))}
         </div>
       </div>
       <form
-        className="p-3 border border-black"
+        className="p-3 border border-black ml-[-12px] md:ml-0"
         onSubmit={(e) => {
           e.preventDefault();
           dispatch(addMessage({ 
@@ -44,14 +44,14 @@ const ChatContainer = () => {
         }}
       >
         <input
-          className="w-72 p-2 rounded-3xl border-2 border-black"
+          className="w-[200px] md:w-72 p-2 rounded-3xl border-2 border-black"
           type="chat"
           value={sendMassage}
           onChange={(e) => {
             setSendMassage(e.target.value);
           }}
         />
-        <button className="ml-7 bg-cyan-200 p-2 px-8 rounded-2xl">Send</button>
+        <button className="ml-4 md:ml-7 bg-cyan-200 p-2 px-8 rounded-2xl">Send</button>
       </form>
     </>
   );

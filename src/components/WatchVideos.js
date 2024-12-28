@@ -17,10 +17,13 @@ const WatchVideos = () => {
 
   return (
     <div>
-      <div className="p-8 flex ">
+      <div className="p-8 block md:flex">
+        
         <iframe
-          width="1000"
-          height="500"
+          width=""
+          height=""
+          className="w-[360px] h-[220px] md:w-[1000px] md:h-[500px]"
+          rounded="xl"
           src={"https://www.youtube.com/embed/" + videoId}
           title="YouTube video player"
           frameborder="0"
@@ -28,6 +31,7 @@ const WatchVideos = () => {
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
+        
         <div className="pl-2 ">
           <ChatContainer />
         </div>

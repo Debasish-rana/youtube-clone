@@ -7,7 +7,7 @@ const Sidebar = () => {
   //console.log(showSidebar);
 
   return (
-    <div>
+    <div className="hidden md:block">
       {showSidebar === true ? (
         <div className="w-64 bg-white p-7 shadow-2xl">
           <ul>

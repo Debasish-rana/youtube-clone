@@ -44,17 +44,17 @@ const Header = () => {
 
   return (
     <div className="flex m-4 justify-between shadow-2xl p-2">
-      <div className="flex ">
+      <div className="flex">
         <img
           onClick={handleClick}
-          className="w-12 h-8 mx-4"
+          className="w-8 h-8 mx-2 sm:mx-4 sm:w-[28px] "
           src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-icon-download-in-svg-png-gif-file-formats--crispy-user-interface-pack-icons-462145.png?f=webp&w=256"
           alt="hamburger menu"
           srcset=""
         />
 
         <img
-          className="h-8 w-36"
+          className="h-3 w-[45px] sm:w-36 mt-3 sm:h-6 sm:mt-0"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlHMUb8U4VeW2y-RflH7U7Yp0tsx1hJv0PwQ&s"
           alt="youtube icon"
         />
@@ -63,7 +63,7 @@ const Header = () => {
         <input
           type="text"
           placeholder="search"
-          className="w-[500px] px-4 p-2 border-2 rounded-l-full"
+          className="w-[143px] h-[38px] sm:w-[500px] sm:h-auto px-4 p-2 border-2 rounded-l-full"
           value={queryval}
           onChange={(e) => {
             setQueryVal(e.target.value);
@@ -75,7 +75,7 @@ const Header = () => {
           🔍
         </button>
         {suggetionBar && (
-          <div className="absolute bg-white  w-[500px] top-18 rounded-lg text-lg">
+          <div className="absolute bg-white ml-[-60px] md:ml-0  w-[280px] md:w-[500px] top-18 rounded-lg text-lg ">
             <ul>
               {suggetion.map((s) => (
                 <li className="px-3 py-2 font-bold hover:bg-slate-200" key={s}>
